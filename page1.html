@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EcoVoyage - AI Travel Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="page1.css"> <!-- Link to the external CSS file -->
+</head>
+
+<body>
+
+    <header>
+        <h1>EcoVoyage</h1>
+        <p>Your AI-powered Eco-Friendly Travel Guide</p>
+    </header>
+
+    <nav>    
+        <a href="destinacions.html">Destinations</a>
+        <a href="popular-pleaces.html">Popular Pleaces</a>
+        <a href="contact.html">Contact</a>
+        <a href="flights.html">Flights</a>
+    </nav>
+
+    <section>
+        <h2 style="text-align:center; color: #1d5f42;">Discover Your Perfect Sustainable Journey</h2>
+        <p style="text-align:center; font-size: 18px;">EcoVoyage is now powered by AI to offer you personalized travel recommendations based on your preferences and interests.</p>
+
+        <div class="features">
+            <div class="feature-box">
+                <h3>AI-Powered Travel Assistant</h3>
+                <p>Get instant travel advice and personalized recommendations from our AI travel assistant. Ask about destinations, accommodations, and activities.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Interactive Itinerary Planner</h3>
+                <p>Let our AI create a custom travel itinerary for you based on your preferences, eco-friendly options, and available budget.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Local Tips & Hidden Gems</h3>
+                <p>Receive tips about local culture, sustainable travel practices, and eco-friendly activities directly from our AI guide.</p>
+            </div>
+        </div>
+
+        <div class="ai-chat-toggle" onclick="toggleChat()">🗣️</div>
+
+        <div class="ai-chat" id="aiChat">
+            <div class="ai-chat-header">EcoVoyage AI Guide</div>
+            <div class="ai-chat-box" id="chatBox">
+                <p>Hi! I'm your travel assistant. How can I help you plan your eco-friendly trip today?</p>
+            </div>
+            <input class="ai-chat-input" type="text" id="userInput" placeholder="Ask me anything about travel...">
+            <button class="ai-chat-button" onclick="sendMessage()">Send</button>
+        </div>
+       
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EcoVoyage. All rights reserved. | Privacy Policy | Terms of Service</p>
+    </footer>
+
+    
+
+    <script>
+        
+    </script>
+
+</body>
+
+</html>

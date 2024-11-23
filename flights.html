@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights</title>
+    <link rel="stylesheet" href="flights.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Flights</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Your next adventure awaits</h2>
+            <p>Find the best flights to your favorite destinations</p>
+            <a href="#search" class="btn">Search Flights</a>
+        </section>
+        <section id="search">
+            <h2>Search Flights</h2>
+            <form id="flight-search-form">
+                <label for="departure">Departure:</label>
+                <input type="text" id="departure" name="departure" placeholder="Enter departure city">
+                
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter destination city">
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section>
+            <h2>Real-Time Flights</h2>
+            <ul id="flightList"></ul> 
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Flight Information | Designed by YourName</p>
+        <script src="main.js"></script>
+    </footer>
+</body>
+</html>
