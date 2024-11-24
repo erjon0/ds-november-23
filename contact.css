@@ -61,35 +61,26 @@ main {
     margin-bottom: 20px;
 }
 
-.btn {
-    background-color: #1d5f42;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-#search {
+#contact-form {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#search h2 {
+#contact-form h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #1d5f42;
 }
 
-#flight-search-form label {
+#contact-form label {
     font-size: 1rem;
     margin: 10px 0 5px;
     display: block;
 }
 
-#flight-search-form input, #flight-search-form button {
+#contact-form input, #contact-form textarea, #contact-form button {
     width: 100%;
     padding: 12px;
     margin: 8px 0;
@@ -98,33 +89,19 @@ main {
     border-radius: 5px;
 }
 
-#flight-search-form button {
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
     background-color: #1d5f42;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-#flight-search-form button:hover {
+#contact-form button:hover {
     background-color: #145a30;
-}
-
-#flightList {
-    list-style-type: none;
-    padding: 0;
-}
-
-#flightList li {
-    background-color: white;
-    margin: 10px 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#flightList li strong {
-    font-size: 1.2rem;
 }
 
 footer {

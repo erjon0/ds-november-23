@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flights</title>
-    <link rel="stylesheet" href="flights.css">
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="flights.css"> <!-- Ensure this path is correct -->
+     <!-- Ensure script is properly linked -->
 </head>
 <body>
     <header>
         <h1>Flights</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="page1.html">Home</a></li>
                 <li><a href="flights.html">Flights</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -45,8 +45,42 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Flight Information | Designed by YourName</p>
-        <script src="main.js"></script>
+        <p>&copy; 2024 Flight Information | Designed by erjon</p>
     </footer>
+
+    <script>
+        // Handle the flight search form
+        document.getElementById('flight-search-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const departure = document.getElementById('departure').value;
+            const destination = document.getElementById('destination').value;
+            const date = document.getElementById('date').value;
+
+            if (!departure || !destination || !date) {
+                alert('Please fill out all fields');
+                return;
+            }
+
+            // Simulate a list of flights based on the search parameters
+            const flights = [
+                { flightNumber: 'AA101', departure: departure, destination: destination, date: date, time: '08:00 AM' },
+                { flightNumber: 'BA202', departure: departure, destination: destination, date: date, time: '02:00 PM' },
+                { flightNumber: 'DL303', departure: departure, destination: destination, date: date, time: '06:00 PM' }
+            ];
+
+            // Clear the previous list of flights
+            const flightList = document.getElementById('flightList');
+            flightList.innerHTML = '';
+
+            // Display the flights
+            flights.forEach(flight => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${flight.flightNumber}</strong>: ${flight.departure} to ${flight.destination} on ${flight.date} at ${flight.time}`;
+                flightList.appendChild(li);
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,28 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Popular Places</title>
     <link rel="stylesheet" href="popular-places.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header>
-        <h1>Popular Places</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="flights.html">Flights</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Popular Places</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="page1.html">Home</a></li>
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
+        <!-- Slideshow Section -->
+        <section class="slideshow">
+            <div class="slideshow-container">
+                <!-- Slide 1 -->
+                <div class="slide fade">
+                    <img src="https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2023/06/16120757/COUV-ARTICLES-1920x1080-2023-06-08T171325.416.jpg" alt="Paris, France">
+                    <div class="caption">Paris, France - The city of love.</div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide fade">
+                    <img src="https://erepublic.brightspotcdn.com/dims4/default/dcba738/2147483647/strip/true/crop/4000x2086+0+86/resize/840x438!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2F60%2Fb6%2Ff4bfbf0d43b182a43cb04d70bdd5%2Fhttps-download.shutterstock.com%2Fgatekeeper%2FW3siZCI6ICJzaHV0dGVyc3RvY2stbWVkaWEiLCAiayI6ICJwaG90by8xMDExMjcwMDAxL2h1Z2UuanBnIiwgImRjIjogImlkbF8xMjMiLCAiZSI6IDE2MzU1NTEyMTcsICJtIjogMX0sICJQTGV2bmFYT2E4aDFjbVJqZFRJdTZkTDQ0Y3MiXQ%3D%3D%2Fshutterstock_1011270001.jpg" alt="New York City, USA">
+                    <div class="caption">New York City, USA - The city that never sleeps.</div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide fade">
+                    <img src="https://img.static-kl.com/images/media/216337E7-BFE5-4AA6-9C9E180C3E5AC6A2" alt="Tokyo, Japan">
+                    <div class="caption">Tokyo, Japan - Tradition meets technology.</div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide fade">
+                    <img src="https://files.oaiusercontent.com/file-J7NwMR7TwywSU8YJoKeARi?se=2024-11-24T09%3A56%3A33Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D2bb44f45-7021-400e-ab29-e34fa22a0b7b.webp&sig=/DJ3JAfRGCihtbtwC5NkYbuIvSp%2B22JbALYplXBPDOw%3D" alt="London, England">
+                    <div class="caption">London, England - A historic and modern hub.</div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide fade">
+                    <img src="https://files.oaiusercontent.com/file-HSvc8kYquBpyYXRjNCyADe?se=2024-11-24T09%3A57%3A51Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dc413fe2f-89be-4757-a446-11d7bb2fb8f3.webp&sig=4uKKSjlrMVeUmdDEOWhqo8P6rF2eeYnjjASH9bLCbOk%3D" alt="Rome, Italy">
+                    <div class="caption">Rome, Italy - The Eternal City.</div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
         <section class="intro">
             <h2>Discover Popular Destinations</h2>
             <p>Explore the most loved places around the world.</p>
         </section>
-        <section>
+
+        <!-- Top Destinations Section -->
+        <section class="top-destinations">
             <h2>Top Destinations</h2>
             <ul class="destination-list">
                 <li><a href="#">Paris, France</a></li>
@@ -32,27 +80,83 @@
                 <li><a href="#">Rome, Italy</a></li>
             </ul>
         </section>
-        <section>
+
+        <!-- Destination Highlights Section -->
+        <section class="highlights">
             <h2>Destination Highlights</h2>
+
             <article>
                 <h3>Paris, France</h3>
-                <img src="images/paris.jpg" alt="Eiffel Tower in Paris">
+                <figure>
+                    <img src="images/paris.jpg" alt="Eiffel Tower in Paris">
+                    <figcaption>The Eiffel Tower in Paris, France</figcaption>
+                </figure>
                 <p>The city of love, known for its iconic Eiffel Tower and romantic ambiance.</p>
             </article>
+
             <article>
                 <h3>New York City, USA</h3>
-                <img src="images/nyc.jpg" alt="Statue of Liberty in New York City">
+                <figure>
+                    <img src="images/nyc.jpg" alt="Statue of Liberty in New York City">
+                    <figcaption>The Statue of Liberty in New York City, USA</figcaption>
+                </figure>
                 <p>The city that never sleeps, offering endless entertainment and landmarks like Times Square.</p>
             </article>
+
             <article>
                 <h3>Tokyo, Japan</h3>
-                <img src="images/tokyo.jpg" alt="Tokyo Tower in Tokyo">
+                <figure>
+                    <img src="images/tokyo.jpg" alt="Tokyo Tower in Tokyo">
+                    <figcaption>Tokyo Tower in Tokyo, Japan</figcaption>
+                </figure>
                 <p>A bustling metropolis blending traditional culture with cutting-edge technology.</p>
             </article>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Travel Guide | Designed by YourName</p>
+        <div class="footer-container">
+            <p>&copy; 2024 Travel Guide | Designed by erjon</a></p>
+        </div>
     </footer>
+
+    <script>
+        let currentSlideIndex = 0;
+
+        // Function to show slides
+        function showSlides() {
+            const slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => (slide.style.display = "none")); // Hide all slides
+
+            currentSlideIndex++;
+            if (currentSlideIndex > slides.length) {
+                currentSlideIndex = 1;
+            }
+
+            slides[currentSlideIndex - 1].style.display = "block"; // Show the current slide
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+
+        // Manual slide control
+        function changeSlide(n) {
+            const slides = document.querySelectorAll(".slide");
+            slides[currentSlideIndex - 1].style.display = "none"; // Hide current slide
+
+            currentSlideIndex += n;
+            if (currentSlideIndex < 1) {
+                currentSlideIndex = slides.length;
+            } else if (currentSlideIndex > slides.length) {
+                currentSlideIndex = 1;
+            }
+
+            slides[currentSlideIndex - 1].style.display = "block"; // Show new slide
+        }
+
+        // Initialize slideshow
+        document.addEventListener("DOMContentLoaded", () => {
+            showSlides(); // Start the slideshow
+        });
+    </script>
 </body>
+
 </html>

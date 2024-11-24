@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -10,18 +9,20 @@ body {
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    padding-top: 60px; /* Added space for fixed navigation */
 }
 
 /* Header */
 header, .site-header {
-    background: linear-gradient(135deg, #1d5f42, #2a7d5e);
+    background: linear-gradient(135deg, #1d5f42, #1d5f42);
     color: white;
     text-align: center;
     padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
 }
 
 header h1, .site-header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -31,30 +32,41 @@ header p, .site-header p {
 }
 
 /* Navigation */
-nav, .main-nav {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
+nav {
     display: flex;
     justify-content: center;
-    padding: 15px;
-    gap: 20px;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed; /* Fixes nav to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-nav a, .main-nav a {
-    color: #1d5f42;
+nav a {
+    color: white;
     text-decoration: none;
-    font-weight: 700;
-    transition: color 0.3s;
+    padding: 14px 20px;
+    font-size: 16px;
+    text-transform: uppercase; /* Adds a more formal look */
 }
 
-nav a:hover, .main-nav a:hover {
-    color: #f17a45;
+nav a:hover {
+    background-color: #575757;
+    border-radius: 5px; /* Adds rounded corners on hover */
 }
 
 /* Main Content */
 main {
     padding: 20px;
     text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px; /* Constrained max-width for better readability */
 }
 
 .intro {
@@ -64,37 +76,44 @@ main {
 .intro input {
     width: 80%;
     max-width: 400px;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
     border-radius: 5px;
     margin-top: 20px;
     font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.intro input:focus {
+    border-color: #1d5f42; /* Highlight focus state */
+    outline: none;
 }
 
 /* Destination List */
 ul, .country-list, .destination-list ul {
     list-style: none;
     padding: 0;
-    max-width: 600px;
+    max-width: 800px;
     margin: 1em auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 0.5em;
+    gap: 0.8em;
 }
 
 li, .country-list li, .destination-list li {
     background: #fff;
     margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s ease, background-color 0.3s;
+    font-size: 1.1rem;
 }
 
 li:hover, .country-list li:hover, .destination-list li:hover {
-    background-color: #005bb5;
-    transform: scale(1.02);
+    background-color: #1d5f42;
+    transform: scale(1.05);
     color: white;
 }
 
@@ -105,11 +124,12 @@ a, .country-list a, .destination-list a {
     font-weight: 600;
     display: block;
     padding: 0.5em;
-    transition: color 0.3s;
+    transition: color 0.3s, font-weight 0.3s;
 }
 
 a:hover, .country-list a:hover, .destination-list a:hover {
     color: white;
+    font-weight: 700;
 }
 
 /* Modal */
@@ -123,15 +143,17 @@ a:hover, .country-list a:hover, .destination-list a:hover {
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    z-index: 2000;
 }
 
 .modal-content {
     background: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     text-align: left;
     max-width: 500px;
     width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .close-btn {
@@ -149,13 +171,39 @@ footer, .site-footer {
     background: #f0f4f1;
     color: #777;
     margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer a, .site-footer a {
     color: #1d5f42;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 footer a:hover, .site-footer a:hover {
+    color: #333;
     text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav a {
+        padding: 12px 15px;
+    }
+
+    .intro input {
+        width: 90%;
+    }
+
+    ul, .country-list, .destination-list ul {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
 }
